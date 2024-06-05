@@ -3,7 +3,7 @@ import React from 'react'
 const DuckImages = () => {
   return (
     <div>
-      <h1>duck</h1>
+      <h1>No available  duck images yet</h1>
     </div>
   )
 }

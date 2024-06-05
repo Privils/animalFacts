@@ -14,61 +14,72 @@ const DogImages = () => {
     }));
     console.log(`Rating for image ${index}: ${newRating}`);
   };
-  useEffect(()=>{
-dogImagesApi();
-  }, [])
+  useEffect(() => {
+    dogImagesApi();
+  }, []);
   //live_aNRty6DdAd8u19ofHXTwYrMI2z3loC8bie519NU7z6TGblhbumVqCCuq6OKBjf4q
   const dogImagesApi = async () => {
     const url = `https://api.thedogapi.com/v1/images/search?limit=10&api_key=${APIkEY}`;
-  
+
     try {
       const responses = await Promise.all(
-        Array.from({ length: 10 }, () => fetch(url).then((response) => response.json()))
+        Array.from({ length: 10 }, () =>
+          fetch(url).then((response) => response.json())
+        )
       );
-  
+
       const data = responses.flat();
       console.log(data);
-      setDogApi(data)
+      setDogApi(data);
     } catch (error) {
       console.log(error);
-    } finally{
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
-  
-  
+
   return (
     <>
-      
-    <div className="dogImageContainer">
-    {loading ? (
-        <p id="loading">Loading....</p>
-      ) : (
-
-        <>
-          
-   {dogAPI.map((dog, index) =>(
-<div className="shadow">
-           <div className="dogImage" key={index}>
-               <img src={dog.url} alt="images of dogs" loading="lazy"/>
-               <div className="rating">
-               <ReactStars
-                 count={5}
-                 onChange={(newRating) => handleRatingChange(index, newRating)}
-                 size={30}
-                 color1={'#e3e3e3'}
-                 color2={'rgb(255, 0, 85)'}
-                 half={true}
-                 value={ratings[index] || 0}
-               />
-               </div>
-           </div>
-</div>
-       ))}
-        </>
-      )}
-   </div>
-</>
+      <div className="dogImageContainer">
+        {loading ? (
+          <p className="loading">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+          </p>
+        ) : (
+          <>
+            {dogAPI.map((dog, index) => (
+              <div className="shadow">
+                <div className="dogImage" key={index}>
+                  <img src={dog.url} alt="images of dogs" loading="lazy" />
+                  <div className="rating">
+                    <ReactStars
+                      count={5}
+                      onChange={(newRating) =>
+                        handleRatingChange(index, newRating)
+                      }
+                      size={30}
+                      color2={"#e3e3e3"}
+                      color1={"rgb(255, 0, 85)"}
+                      half={true}
+                      value={ratings[index] || 0}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
