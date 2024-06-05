@@ -7,16 +7,11 @@
 body{
   height: 100vh;
   width: 100%;
-  background-image: url('./components/images/th\ \(4\).jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 header{
   width: 100%;
-  height: 100px;
+  height: 80px;
   align-content: center;
   background: rgb(255, 0, 85);
 }
@@ -69,7 +64,7 @@ border-radius: 5px;
   align-items: center;
 }
 .dogContainer{
-  background-image: url('./components/images/th.jpeg');
+  background-image: url('./components/images/pexels-chevanon-1108099.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,7 +74,7 @@ border-radius: 5px;
 #dogInfo, #catInfo, #foxInfo, #duckInfo{
   width: 800px;
   height: 400px;
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 0.774);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -92,36 +87,32 @@ border-radius: 5px;
     "wdth" 87.5;
     border-radius: 20px;
 }
-#catInfo, #dogInfo{
-  background: rgba(255, 255, 255, 0.2);
-}
+
 .dogText, .catText, .foxText, .duckText{
 color: rgb(255, 255, 255);
 font-size: 20px;
 word-spacing: 5px;
 margin: 7px;
 padding: 5px;
+font-weight: 500;
 }
-.catText, .dogText{
-  color: rgb(0, 0, 0);
-  font-weight: 500;
-}
+
 .catContainer{
-  background-image: url('./components/images/th\ \(1\).jpeg');
+  background-image: url('./components/images/pexels-didsss-1276553.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 .foxContainer{
-  background-image: url('./components/images/th\ \(2\).jpeg');
+  background-image: url('./components/images/pexels-monicore-134058.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 .duckContainer{
-  background-image: url('./components/images/th\ \(3\).jpeg');
+  background-image: url('./components/images/pexels-kristi-evans-383398-1024501.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,9 +123,6 @@ padding: 5px;
   text-align: center;
   font-size: 22px;
   text-transform: capitalize;
-}
-.name{
-  color: black;
 }
 .btnContainer{
   width: 100%;
@@ -188,11 +176,8 @@ padding: 5px;
 }
 .dogImage{
   width: 300px;
-  height: 300px;
-  margin: 5px;
-  margin-bottom: 49px;
-  margin-left: 10px;
-  margin-right: 10px;
+  height: 350px;
+  margin-bottom: 99px;
   margin-top: 5px;
 }
 .dogImage img{
@@ -212,5 +197,21 @@ padding: 5px;
   text-transform: capitalize;
   font-weight: 700;
   font-size: 20px;
+  text-align: center;
+}
+.shadow{
+  background: rgb(0, 0, 0);
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px;
+  border-radius: 10px;
+  height: 410px;
+  width: fit-content;
+  margin-left: 10px;
+}
+#loading{
+  width: 100%;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 400;
   text-align: center;
 }
