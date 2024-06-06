@@ -20,6 +20,18 @@ header nav{
   display: flex;
   justify-content: space-between;
 }
+#check{
+  display: none;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
 .logo{
   text-decoration: none;
   color: rgb(0,0,0);
@@ -54,6 +66,7 @@ background-color: rgba(0, 0, 0, .3);
 border-bottom: 3px solid pink;
 border-radius: 5px;
 }
+
 .dogContainer, .catContainer, .foxContainer, .duckContainer{
   background: rgba(255, 0, 0, 0.9);
   width: 100%;
@@ -255,4 +268,74 @@ font-weight: 500;
   50% {
     transform: translateY(-20px);
   }
+}
+/*mobile designs*/
+
+@media (max-width: 1000px) {
+  /*dogImages*/
+.dogImage{
+  width: 220px;
+  height: 250px;
+  margin-bottom: 49px;
+  margin-top: 5px;
+}
+.shadow{
+  background: rgb(0, 0, 0);
+  margin-top: 10px;
+  height: fit-content;
+  width: fit-content;
+  margin-left: 5px;
+}
+.loading{
+    font-size: 30px;
+  font-weight: 300;
+}
+}
+@media (max-width: 680px) {
+  /*dogImages*/
+.dogImage{
+  width: 150px;
+  height: 200px;
+}
+.loading{
+    font-size: 25px;
+}
+}
+
+@media (max-width: 500px) {
+header{
+  background: rgb(61, 58, 59);
+}
+/*home*/
+.btn{
+  background: rgb(0, 0, 0);
+}
+.btn a{
+  font-size: 20px;
+}
+.footer{
+  background: rgb(61, 58, 59);
+
+}
+.footer div p{
+  font-size: 15px;
+}
+.heart{
+  color: rgb(255, 0, 191);
+}
+.dogImage{
+  width: 150px;
+  height: 200px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.dogImage img{
+  width: 100%;
+}
+.rating{
+  display: none;
+}
+.checkbtn{
+  font-size: 1em;
+}
 }

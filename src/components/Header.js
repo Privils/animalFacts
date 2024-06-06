@@ -1,27 +1,18 @@
 import React from 'react';
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
   return (
    <>
    <header>
     <nav>
-        <a href="#" className='logo'>AnimalZone</a>
+        <a href="/animalLover" className='logo'>AnimalZone</a>
+        <input type="checkbox" id="check"/>
+        <label htmlFor="check" className="checkbtn">
+        <FaBars />
+          </label>
         <ul>
-            <li>
-                <a href="/">Home</a> 
-            </li>
-            <li>
-                <a href="#cats">cats</a>
-            </li>
-            <li>
-                <a href="#dogs">dogs</a>
-            </li>
-            <li>
-                <a href="#foxes">foxes</a>
-            </li>
-            <li>
-                <a href="#ducks">ducks</a>
-            </li>
+            
         </ul>
     </nav>
    </header>

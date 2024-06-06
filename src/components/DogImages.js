@@ -62,6 +62,7 @@ const DogImages = () => {
                   <img src={dog.url} alt="images of dogs" loading="lazy" />
                   <div className="rating">
                     <ReactStars
+                    classNames={'rates'}
                       count={5}
                       onChange={(newRating) =>
                         handleRatingChange(index, newRating)
